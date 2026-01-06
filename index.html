@@ -5,67 +5,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shatter the Nations</title>
   <style>
+    /* COLORS */
+    :root {
+      --gold: #FFD700;
+      --navy: #1a2b4c;
+      --grey: #f5f5f5;
+      --white: #ffffff;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
+      background-color: var(--grey);
+      color: var(--navy);
       text-align: center;
-      background-color: #f5f5f5;
-      color: #333;
     }
+
     header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 50px 20px;
+      background-color: var(--navy);
+      color: var(--gold);
+      padding: 60px 20px 40px 20px;
+      position: relative;
     }
-    h1 {
-      margin: 0;
-      font-size: 3em;
-    }
-    p.mission {
-      font-size: 1.2em;
-      margin: 20px 0;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    a.button {
-      display: inline-block;
-      padding: 15px 30px;
-      background-color: #e74c3c;
-      color: white;
-      text-decoration: none;
+
+    header h1 {
+      font-size: 3.5em;
       font-weight: bold;
-      border-radius: 8px;
-      margin-top: 20px;
+      margin: 0;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
     }
-    a.button:hover {
-      background-color: #c0392b;
-    }
-    section {
-      padding: 50px 20px;
-    }
-    section h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-    section p {
-      max-width: 700px;
-      margin: 0 auto 30px auto;
-      font-size: 1.1em;
+
+    header p.mission {
+      font-size: 1.2em;
+      color: var(--white);
+      max-width: 900px;
+      margin: 20px auto 30px auto;
       line-height: 1.6em;
     }
-    footer {
-      margin-top: 50px;
-      padding: 20px;
-      background-color: #2c3e50;
-      color: white;
-    }
+
+    /* Poster Image */
     img.poster {
-      max-width: 100%;
+      max-width: 90%;
       height: auto;
-      margin-top: 20px;
       border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 15px 40px;
+      background-color: var(--gold);
+      color: var(--navy);
+      font-weight: bold;
+      font-size: 1.1em;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    a.button:hover {
+      background-color: #e6c200;
+    }
+
+    main {
+      padding: 60px 20px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    section h2 {
+      font-size: 2.2em;
+      color: var(--navy);
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    /* small cross behind section headers */
+    section h2::before {
+      content: "✝";
+      position: absolute;
+      left: -30px;
+      top: 0;
+      color: var(--gold);
+      font-size: 1.5em;
+    }
+
+    section p {
+      font-size: 1.1em;
+      max-width: 750px;
+      margin: 0 auto;
+      line-height: 1.7em;
+      color: #333;
+    }
+
+    footer {
+      background-color: var(--navy);
+      color: var(--gold);
+      padding: 25px 20px;
+      font-size: 0.9em;
+    }
+
+    /* small cross in footer */
+    footer::before {
+      content: "✝ ";
     }
   </style>
 </head>
@@ -86,14 +134,14 @@
     <section>
       <h2>Our Vision</h2>
       <p>
-        Shatter the Nations exists to empower teens and youth worldwide with hope, guidance, and community. Through innovative conferences, online programs, and mentorship, we inspire young people to live purposeful, meaningful lives.
+        Shatter the Nations exists to empower teens and youth worldwide with hope, guidance, and community. Through innovative conferences, online programs, and mentorship, we inspire young people to live purposeful, meaningful lives centered in Christ.
       </p>
     </section>
 
     <section>
       <h2>Get Involved</h2>
       <p>
-        Join our movement. Volunteer, donate, or partner with us to make an eternal impact. Every contribution helps us reach more teenagers with life-changing support.
+        Join our movement. Volunteer, donate, or partner with us to make an eternal impact. Every contribution helps us reach more teenagers with life-changing support and spiritual guidance.
       </p>
       <a class="button" href="mailto:info@shatterthenations.org">Join / Donate</a>
     </section>
