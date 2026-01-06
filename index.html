@@ -6,47 +6,93 @@
   <title>Shatter the Nations</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Lato:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Lato:wght@400;700&family=Merriweather:wght@700&family=Indie+Flower&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --gold: #FFD700;
       --navy: #0B1D3A;
-      --grey: #F0F0F0;
+      --grey-stone: #555555;
+      --grey-bg: #F0F0F0;
       --dark-grey: #222222;
-      --white: #ffffff;
     }
 
     body {
       font-family: 'Lato', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: var(--grey);
+      background: url('teens-worship.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: var(--dark-grey);
-      line-height: 1.7;
       text-align: center;
+      position: relative;
+    }
+
+    /* Dark overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.4);
+      z-index: -1;
     }
 
     header {
-      background-color: var(--navy);
+      position: relative;
+      padding: 80px 20px 60px 20px;
       color: var(--gold);
-      padding: 60px 20px 40px 20px;
     }
 
-    header h1 {
+    /* Globe Icon top-left */
+    .globe {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 50px;
+    }
+
+    /* Header text styling */
+    .header-title {
+      display: inline-block;
+      line-height: 1;
+    }
+
+    .shatter {
       font-family: 'Cinzel', serif;
       font-weight: 900;
       font-size: 4em;
-      margin: 0;
-      text-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+      color: var(--grey-stone);
+      text-shadow: 2px 2px 8px #333;
+      display: block;
+    }
+
+    .the {
+      font-family: 'Indie Flower', cursive;
+      font-size: 2em;
+      color: var(--gold);
+      font-style: italic;
+      display: block;
+      margin-left: 10px;
+    }
+
+    .nations {
+      font-family: 'Cinzel', serif;
+      font-weight: 900;
+      font-size: 4em;
+      color: var(--gold);
+      text-shadow: 0 0 15px #FFD700, 0 0 25px #FFC700, 0 0 35px #FFD700;
+      display: block;
+      margin-top: -10px;
     }
 
     header p.mission {
       font-size: 1.3em;
-      color: var(--white);
+      color: #ffffff;
       max-width: 900px;
-      margin: 25px auto;
-      font-family: 'Lato', sans-serif;
+      margin: 25px auto 30px auto;
     }
 
     a.button {
@@ -70,11 +116,13 @@
       padding: 50px 20px;
       max-width: 1000px;
       margin: auto;
+      text-align: left;
+      background-color: rgba(255,255,255,0.85);
+      border-radius: 15px;
     }
 
     section {
       margin-bottom: 60px;
-      text-align: left;
     }
 
     section h2 {
@@ -117,6 +165,7 @@
       color: var(--gold);
       padding: 25px 20px;
       font-size: 0.9em;
+      text-align: center;
     }
 
     footer::before {
@@ -127,19 +176,36 @@
       header h1{
         font-size: 2.5em;
       }
+      .shatter, .nations {
+        font-size: 2.2em;
+      }
+      .the {
+        font-size: 1.5em;
+      }
+      .globe {
+        font-size: 35px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Shatter the Nations</h1>
+    <div class="globe">🌐</div>
+    <div class="header-title">
+      <span class="shatter">Shatter</span>
+      <span class="the">the</span>
+      <span class="nations">Nations</span>
+    </div>
+
     <p class="mission">
       To reach teenagers with hope, truth, and support—meeting them where they are and walking with them toward spiritual wholeness and emotional health. We combine in-person teen conferences nationwide with cutting-edge technology to create a global, always-on support network for young people.
     </p>
+
     <a class="button" href="mailto:info@shatterthenations.org">Donate / Contact</a>
   </header>
 
   <main>
+    <!-- All previous content sections remain identical -->
     <section>
       <h2>About Us</h2>
       <p>A national movement designed to reach, connect, and restore teenagers at a moment when isolation, anxiety, and spiritual confusion are defining an entire generation.</p>
