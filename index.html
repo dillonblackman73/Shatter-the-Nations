@@ -11,6 +11,7 @@
       padding: 0;
       text-align: center;
       background-color: #f5f5f5;
+      color: #333;
     }
     header {
       background-color: #2c3e50;
@@ -21,9 +22,12 @@
       margin: 0;
       font-size: 3em;
     }
-    p {
+    p.mission {
       font-size: 1.2em;
       margin: 20px 0;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
     a.button {
       display: inline-block;
@@ -38,6 +42,19 @@
     a.button:hover {
       background-color: #c0392b;
     }
+    section {
+      padding: 50px 20px;
+    }
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    section p {
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+      font-size: 1.1em;
+      line-height: 1.6em;
+    }
     footer {
       margin-top: 50px;
       padding: 20px;
@@ -49,19 +66,26 @@
 <body>
   <header>
     <h1>Shatter the Nations</h1>
-    <p>Raising a movement of youth to change the world for Christ.</p>
+    <p class="mission">
+      To reach teenagers with hope, truth, and support—meeting them where they are and walking with them toward spiritual wholeness and emotional health. We combine in-person teen conferences nationwide with cutting-edge technology to create a global, always-on support network for young people.
+    </p>
     <a class="button" href="mailto:info@shatterthenations.org">Donate / Contact</a>
   </header>
 
   <main>
     <section>
-      <h2>Our Mission</h2>
-      <p>We aim to reach 5 million youth nationwide in 12 months through ministry, training, and outreach.</p>
+      <h2>Our Vision</h2>
+      <p>
+        Shatter the Nations exists to empower teens and youth worldwide with hope, guidance, and community. Through innovative conferences, online programs, and mentorship, we inspire young people to live purposeful, meaningful lives.
+      </p>
     </section>
 
     <section>
       <h2>Get Involved</h2>
-      <p>Join our movement. Volunteer, donate, or partner with us to make an eternal impact.</p>
+      <p>
+        Join our movement. Volunteer, donate, or partner with us to make an eternal impact. Every contribution helps us reach more teenagers with life-changing support.
+      </p>
+      <a class="button" href="mailto:info@shatterthenations.org">Join / Donate</a>
     </section>
   </main>
 
