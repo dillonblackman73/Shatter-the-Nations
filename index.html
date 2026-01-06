@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shatter the Nations</title>
+
+  <!-- Google Font for popping header -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+
   <style>
-    /* COLORS */
     :root {
       --gold: #FFD700;
       --navy: #1a2b4c;
@@ -14,11 +17,12 @@
     }
 
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: var(--grey);
       color: var(--navy);
+      line-height: 1.7;
       text-align: center;
     }
 
@@ -26,31 +30,21 @@
       background-color: var(--navy);
       color: var(--gold);
       padding: 60px 20px 40px 20px;
-      position: relative;
     }
 
     header h1 {
-      font-size: 3.5em;
-      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 4em;
       margin: 0;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+      text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
     }
 
     header p.mission {
-      font-size: 1.2em;
+      font-size: 1.3em;
       color: var(--white);
       max-width: 900px;
-      margin: 20px auto 30px auto;
-      line-height: 1.6em;
-    }
-
-    /* Poster Image */
-    img.poster {
-      max-width: 90%;
-      height: auto;
-      border-radius: 10px;
-      margin-top: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      margin: 25px auto;
     }
 
     a.button {
@@ -71,22 +65,24 @@
     }
 
     main {
-      padding: 60px 20px;
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
 
     section {
       margin-bottom: 60px;
+      text-align: left;
     }
 
     section h2 {
-      font-size: 2.2em;
+      font-size: 2em;
       color: var(--navy);
       margin-bottom: 20px;
       position: relative;
       display: inline-block;
     }
 
-    /* small cross behind section headers */
     section h2::before {
       content: "✝";
       position: absolute;
@@ -98,10 +94,18 @@
 
     section p {
       font-size: 1.1em;
-      max-width: 750px;
-      margin: 0 auto;
-      line-height: 1.7em;
       color: #333;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      text-align: left;
+      margin-left: 30px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
     }
 
     footer {
@@ -111,9 +115,14 @@
       font-size: 0.9em;
     }
 
-    /* small cross in footer */
     footer::before {
       content: "✝ ";
+    }
+
+    @media(max-width:768px){
+      header h1{
+        font-size: 2.5em;
+      }
     }
   </style>
 </head>
@@ -123,26 +132,44 @@
     <p class="mission">
       To reach teenagers with hope, truth, and support—meeting them where they are and walking with them toward spiritual wholeness and emotional health. We combine in-person teen conferences nationwide with cutting-edge technology to create a global, always-on support network for young people.
     </p>
-
-    <!-- Poster Image -->
-    <img src="Screenshot_20260105_141346_Photos.jpg" alt="Shatter the Nations Poster" class="poster" />
-
     <a class="button" href="mailto:info@shatterthenations.org">Donate / Contact</a>
   </header>
 
   <main>
     <section>
-      <h2>Our Vision</h2>
-      <p>
-        Shatter the Nations exists to empower teens and youth worldwide with hope, guidance, and community. Through innovative conferences, online programs, and mentorship, we inspire young people to live purposeful, meaningful lives centered in Christ.
-      </p>
+      <h2>About Us</h2>
+      <p>A national movement designed to reach, connect, and restore teenagers at a moment when isolation, anxiety, and spiritual confusion are defining an entire generation.</p>
+      <p>Here’s the reality:<br>
+      Teens are asking life-and-death questions every day — and too often, no one is answering them.</p>
+      <p>Our solution is not theoretical. It is operational.</p>
+    </section>
+
+    <section>
+      <h2>Our System</h2>
+      <p>Shatter the Nations combines three proven pillars into one scalable system:</p>
+      <ul>
+        <li>Nationwide teen conferences that clearly present hope, truth, and purpose</li>
+        <li>A global digital platform that provides ongoing encouragement, spiritual guidance, and mental-health check-ins</li>
+        <li>Localized intervention, connecting teens directly to vetted churches, counselors, and trusted advisors in their own communities</li>
+      </ul>
+      <p>When a teen reaches out for help, they are not left alone. They are immediately connected to real people, real resources, and real follow-through.</p>
+    </section>
+
+    <section>
+      <h2>Our Goal</h2>
+      <p>Our goal is clear and measurable: <strong>$5 million in 12 months</strong></p>
+      <p>This funding allows us to:</p>
+      <ul>
+        <li>Expand conferences nationwide</li>
+        <li>Scale our technology platform globally</li>
+        <li>Train and onboard churches, counselors, and advisors across the country</li>
+      </ul>
+      <p>This is not a short-term program. It is an infrastructure for the next generation. If you’ve ever asked, “What can actually turn the tide for young people?” — this is it.</p>
     </section>
 
     <section>
       <h2>Get Involved</h2>
-      <p>
-        Join our movement. Volunteer, donate, or partner with us to make an eternal impact. Every contribution helps us reach more teenagers with life-changing support and spiritual guidance.
-      </p>
+      <p>Join our movement. Volunteer, donate, or partner with us to make an eternal impact. Every contribution helps us reach more teenagers with life-changing support and spiritual guidance.</p>
       <a class="button" href="mailto:info@shatterthenations.org">Join / Donate</a>
     </section>
   </main>
