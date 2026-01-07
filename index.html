@@ -17,14 +17,15 @@
       --text-dark: #222222;
     }
 
+    /* ===== BODY ===== */
     body {
       margin: 0;
       font-family: 'Lato', sans-serif;
       background: url('teens-worship.jpg') no-repeat center center fixed;
       background-size: cover;
+      scroll-behavior: smooth; /* smooth scrolling for tabs */
     }
 
-    /* Dark overlay for background image */
     body::before {
       content: "";
       position: fixed;
@@ -33,10 +34,34 @@
       z-index: -1;
     }
 
-    /* ================= HEADER (BLACK) ================= */
+    /* ===== NAVIGATION BAR ===== */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    /* ===== HEADER ===== */
     header {
-      background: #000000; /* fully black */
-      color: #ffffff;
+      background: #000;
+      color: #fff;
       text-align: center;
       padding: 90px 20px 60px;
     }
@@ -45,12 +70,10 @@
       max-width: 420px;
       width: 90%;
       height: auto;
-      margin-bottom: 25px;
-      filter: none; /* remove glow */
       display: block;
-      margin-left: auto;
-      margin-right: auto;
-      background: #000; /* ensure black background behind logo */
+      margin: 0 auto 25px;
+      background: #000;
+      filter: none;
     }
 
     .mission {
@@ -75,14 +98,13 @@
       background: #e6c200;
     }
 
-    /* ================= MAIN (WHITE) ================= */
+    /* ===== MAIN CONTENT ===== */
     main {
       background: var(--light);
       color: var(--text-dark);
       max-width: 1100px;
       margin: 0 auto;
       padding: 70px 30px;
-      text-align: left;
     }
 
     section {
@@ -110,7 +132,6 @@
       margin-left: 25px;
     }
 
-    /* ================= FOOTER ================= */
     footer {
       background: #000;
       color: var(--gold);
@@ -119,7 +140,6 @@
       font-size: 0.9em;
     }
 
-    /* ================= MOBILE ================= */
     @media(max-width:768px){
       .logo img {
         max-width: 300px;
@@ -127,14 +147,27 @@
       main {
         padding: 50px 20px;
       }
+      nav {
+        gap: 15px;
+        flex-wrap: wrap;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- NAVIGATION TABS -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#system">Our System</a>
+    <a href="#goal">Our Goal</a>
+    <a href="#getinvolved">Get Involved</a>
+  </nav>
+
   <!-- BLACK HEADER -->
-  <header>
+  <header id="home">
     <div class="logo">
       <img src="Screenshot_20260106_190438_ChatGPT.jpg" alt="Shatter the Nations Logo">
     </div>
@@ -146,9 +179,10 @@
     <a class="button" href="mailto:info@shatterthenations.org">Donate / Contact</a>
   </header>
 
-  <!-- WHITE CONTENT -->
+  <!-- WHITE MAIN CONTENT -->
   <main>
-    <section>
+
+    <section id="about">
       <h2>About Us</h2>
       <p>
         A national movement designed to reach, connect, and restore teenagers at a moment when isolation,
@@ -162,7 +196,7 @@
       </p>
     </section>
 
-    <section>
+    <section id="system">
       <h2>Our System</h2>
       <ul>
         <li>Nationwide teen conferences presenting hope, truth, and purpose</li>
@@ -175,7 +209,7 @@
       </p>
     </section>
 
-    <section>
+    <section id="goal">
       <h2>Our Goal</h2>
       <p><strong>$5 million in 12 months</strong></p>
       <p>
@@ -188,7 +222,7 @@
       </p>
     </section>
 
-    <section>
+    <section id="getinvolved">
       <h2>Get Involved</h2>
       <p>
         Join the movement. Volunteer, donate, or partner with us to help restore
@@ -196,6 +230,7 @@
       </p>
       <a class="button" href="mailto:info@shatterthenations.org">Join / Donate</a>
     </section>
+
   </main>
 
   <footer>
