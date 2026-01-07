@@ -53,7 +53,7 @@
     header {
       position: relative;
       text-align: center;
-      padding: 90px 20px 60px;
+      padding: 60px 20px 40px;
       background-color: #000;
     }
 
@@ -77,13 +77,41 @@
       margin: 0 auto 25px;
     }
 
-    .mission {
-      font-size: 1.3em;
-      max-width: 900px;
-      margin: 0 auto 30px;
-      line-height: 1.6;
+    /* ===== HEADER TEXT UNDER LOGO ===== */
+    .header-text {
       position: relative;
       z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 15px;
+      text-align: center;
+      color: var(--gold);
+    }
+
+    .header-title {
+      font-family: 'Merriweather', serif;
+      font-size: 2.8em;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .header-mission {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.2em;
+      line-height: 1.6;
+      color: #fff;
+      margin-bottom: 25px;
+    }
+
+    .header-impact {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.5em;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--gold);
+      line-height: 1.8;
+      margin-bottom: 30px;
     }
 
     .button {
@@ -194,7 +222,7 @@
     }
 
     tbody tr:nth-child(odd) {
-      background-color: #fdf6e3; /* light goldish row */
+      background-color: #fdf6e3;
     }
 
     tbody tr:nth-child(even) {
@@ -220,8 +248,16 @@
         gap: 15px;
         flex-wrap: wrap;
       }
+      .header-title {
+        font-size: 2em;
+      }
+      .header-mission {
+        font-size: 1em;
+      }
+      .header-impact {
+        font-size: 1.3em;
+      }
     }
-
   </style>
 </head>
 
@@ -243,9 +279,19 @@
       <img src="Screenshot_20260106_190438_ChatGPT.jpg" alt="Shatter the Nations Logo">
     </div>
 
-    <p class="mission">
-      To reach teenagers with hope, truth, and support—meeting them where they are and walking with them toward spiritual wholeness and emotional health. We combine in-person teen conferences nationwide with cutting-edge technology to create a global, always-on support network for young people.
-    </p>
+    <!-- NEW HEADER TEXT -->
+    <div class="header-text">
+      <h1 class="header-title">A GLOBAL TAKE-OVER FOR THE KINGDOM</h1>
+      <p class="header-mission">
+        Awakening and uniting thousands of churches to unleash a wave of Holy Spirit-filled revivals,
+        to support and empower the rising teenage generation, and SHATTERING ALL NATIONS with God's Word—sending disciples to every nation and to every corner of the earth.
+      </p>
+      <p class="header-impact">
+        REVIVAL IS NOW.<br>
+        DISCIPLES ARE RISING.<br>
+        THE NATIONS WILL BE SHAKEN.
+      </p>
+    </div>
 
     <a class="button" href="mailto:info@shatterthenations.org">Donate / Contact</a>
   </header>
