@@ -5,27 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shatter the Nations</title>
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --gold: #FFD700;
-      --navy: #0B1D3A;
-      --dark: #000000;
-      --light: #ffffff;
-      --text-dark: #222222;
-      --purple: #6A0DAD; /* bold dark purple */
+      --purple: #6A0DAD;
+      --dark: #000;
+      --light: #fff;
+      --text-dark: #222;
     }
 
     body {
       margin: 0;
       font-family: 'Lato', sans-serif;
       background: var(--light);
-      scroll-behavior: smooth;
     }
 
-    /* ===== NAVIGATION BAR ===== */
     nav {
       position: sticky;
       top: 0;
@@ -41,214 +37,116 @@
       color: var(--gold);
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.1em;
-      transition: 0.3s;
     }
 
-    nav a:hover {
-      color: #fff;
-    }
-
-    /* ===== HEADER ===== */
     header {
       position: relative;
       text-align: center;
       padding: 60px 20px 40px;
-      background-color: #000;
+      background: #000;
     }
 
     header::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: url('teens-worship.jpg') no-repeat center center;
-      background-size: cover;
+      background: url('teens-worship.jpg') center/cover no-repeat;
       opacity: 0.3;
-      z-index: 0;
     }
 
     .logo img {
-      position: relative;
-      z-index: 1;
       max-width: 420px;
       width: 90%;
-      height: auto;
-      display: block;
-      margin: 0 auto 25px;
+      margin-bottom: 25px;
+      position: relative;
+      z-index: 1;
     }
 
-    /* ===== HEADER TEXT ===== */
     .header-text {
       position: relative;
       z-index: 1;
+      color: #fff;
       max-width: 900px;
-      margin: 0 auto;
-      padding: 20px 15px;
-      text-align: center;
-      color: var(--gold);
+      margin: auto;
     }
 
     .header-title {
       font-family: 'Merriweather', serif;
-      font-size: 2.8em;
-      font-weight: 700;
       color: var(--gold);
-      margin-bottom: 20px;
-    }
-
-    .header-mission {
-      font-family: 'Lato', sans-serif;
-      font-size: 1.2em;
-      line-height: 1.6;
-      color: #fff;
-      margin-bottom: 25px;
-    }
-
-    .header-impact {
-      font-family: 'Lato', sans-serif;
-      text-align: center;
-      line-height: 1.8;
-      margin-bottom: 30px;
+      font-size: 2.6em;
     }
 
     .header-impact span {
       display: block;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    .header-impact .line1 {
-      font-size: 1.5em;
-      color: var(--gold);
-    }
-
-    .header-impact .line2 {
-      font-size: 1.6em;
+      font-weight: bold;
       margin-top: 10px;
-      color: var(--purple); /* dark purple */
     }
 
-    .header-impact .line3 {
-      font-size: 2.2em;
-      margin-top: 15px;
+    .line1 { color: var(--gold); font-size: 1.4em; }
+    .line2 { color: var(--purple); font-size: 1.6em; }
+    .line3 {
       color: var(--gold);
-      text-shadow: 0 0 8px #FFD700, 0 0 15px #FFD700; /* glowing effect */
+      font-size: 2.1em;
+      text-shadow: 0 0 10px var(--gold);
     }
 
     .button {
+      margin-top: 30px;
       display: inline-block;
       padding: 15px 40px;
       background: var(--gold);
       color: #000;
       font-weight: bold;
-      text-decoration: none;
       border-radius: 8px;
-      transition: 0.3s;
-      position: relative;
-      z-index: 1;
+      text-decoration: none;
     }
 
-    .button:hover {
-      background: #e6c200;
-      transform: translateY(-2px);
-    }
-
-    /* ===== MAIN CONTENT ===== */
     main {
-      background: var(--light);
-      color: var(--text-dark);
       max-width: 1100px;
-      margin: 0 auto;
+      margin: auto;
       padding: 70px 30px;
     }
 
     section {
       margin-bottom: 90px;
-      position: relative;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 1s forwards;
     }
 
-    section:nth-child(1) {animation-delay: 0.2s;}
-    section:nth-child(2) {animation-delay: 0.4s;}
-    section:nth-child(3) {animation-delay: 0.6s;}
-    section:nth-child(4) {animation-delay: 0.8s;}
-    section:nth-child(5) {animation-delay: 1s;}
-    section:nth-child(6) {animation-delay: 1.2s;}
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* ===== SECTION HEADINGS ===== */
     section h2 {
       font-family: 'Merriweather', serif;
+      color: var(--purple);
       font-size: 2.2em;
-      margin-bottom: 25px;
       display: flex;
       align-items: center;
       gap: 10px;
-      color: var(--purple); /* dark purple */
     }
 
     section h2::before {
       content: "✝";
       color: var(--gold);
-      font-size: 1.3em;
     }
 
     .divider {
       height: 3px;
       background: var(--gold);
       margin: 50px 0;
-      border-radius: 3px;
     }
 
-    section p, li {
-      font-size: 1.15em;
-      line-height: 1.8;
-    }
-
-    ul {
-      margin-left: 25px;
-      list-style-type: disc;
-      list-style-position: inside;
-      color: var(--text-dark);
-    }
-
-    ul li::marker {
-      color: var(--gold);
-    }
+    ul li::marker { color: var(--gold); }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
-      border-radius: 8px;
-      overflow: hidden;
       border: 2px solid var(--gold);
     }
 
-    th, td {
-      padding: 12px;
-      text-align: left;
-    }
-
     th {
-      background-color: var(--gold);
+      background: var(--gold);
       color: #000;
+      padding: 12px;
     }
 
-    tbody tr:nth-child(odd) {
-      background-color: #fdf6e3;
-    }
-
-    tbody tr:nth-child(even) {
-      background-color: #ffffff;
+    td {
+      padding: 12px;
     }
 
     footer {
@@ -256,202 +154,130 @@
       color: var(--gold);
       text-align: center;
       padding: 25px;
-      font-size: 0.9em;
     }
 
-    @media(max-width:768px){
-      .logo img {
-        max-width: 300px;
-      }
-      main {
-        padding: 50px 20px;
-      }
-      nav {
-        gap: 15px;
-        flex-wrap: wrap;
-      }
-      .header-title {
-        font-size: 2em;
-      }
-      .header-mission {
-        font-size: 1em;
-      }
-      .header-impact .line1 {
-        font-size: 1.3em;
-      }
-      .header-impact .line2 {
-        font-size: 1.4em;
-      }
-      .header-impact .line3 {
-        font-size: 1.8em;
-      }
+    /* Scripture Styling */
+    .scripture-block {
+      margin-top: 50px;
+      padding: 35px 25px;
+      border-top: 3px solid var(--gold);
+      text-align: center;
+    }
+
+    .scripture-text {
+      font-family: 'Merriweather', serif;
+      font-size: 1.25em;
+      line-height: 1.8;
+      color: #222;
+    }
+
+    .scripture-emphasis {
+      display: block;
+      margin: 20px 0;
+      font-size: 1.9em;
+      font-weight: 800;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 0 0 8px rgba(255,215,0,.7);
+    }
+
+    .scripture-reference {
+      margin-top: 15px;
+      font-weight: bold;
+      color: var(--purple);
     }
   </style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION TABS -->
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#system">Our System</a>
-    <a href="#goal">Our Goal</a>
-    <a href="#adolescent">Adolescent Challenges</a>
-    <a href="#getinvolved">Get Involved</a>
-  </nav>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#system">Our System</a>
+  <a href="#goal">Our Goal</a>
+  <a href="#adolescent">Adolescent Challenges</a>
+  <a href="#getinvolved">Get Involved</a>
+</nav>
 
-  <!-- BLACK HEADER -->
-  <header id="home">
-    <div class="logo">
-      <img src="Screenshot_20260106_190438_ChatGPT.jpg" alt="Shatter the Nations Logo">
-    </div>
+<header id="home">
+  <div class="logo">
+    <img src="Screenshot_20260106_190438_ChatGPT.jpg" alt="Logo">
+  </div>
 
-    <!-- HEADER TEXT -->
-    <div class="header-text">
-      <h1 class="header-title">A GLOBAL TAKE-OVER FOR THE KINGDOM</h1>
-      <p class="header-mission">
-        Awakening and uniting thousands of churches to unleash a wave of Holy Spirit-filled revivals,
-        to support and empower the rising teenage generation, and SHATTERING ALL NATIONS with God's Word—sending disciples to every nation and to every corner of the earth.
-      </p>
-      <p class="header-impact">
-        <span class="line1">REVIVAL IS NOW.</span>
-        <span class="line2">DISCIPLES ARE RISING.</span>
-        <span class="line3">THE NATIONS WILL BE SHAKEN.</span>
-      </p>
-    </div>
+  <div class="header-text">
+    <h1 class="header-title">A GLOBAL TAKE-OVER FOR THE KINGDOM</h1>
+    <p class="header-impact">
+      <span class="line1">REVIVAL IS NOW.</span>
+      <span class="line2">DISCIPLES ARE RISING.</span>
+      <span class="line3">THE NATIONS WILL BE SHAKEN.</span>
+    </p>
+  </div>
 
-    <a class="button" href="mailto:Dillon@shatterthenations.org">Donate / Contact</a>
-  </header>
+  <a class="button" href="mailto:Dillon@shatterthenations.org">Donate / Contact</a>
+</header>
 
-  <main>
+<main>
 
-    <section id="about">
-      <h2>About Us</h2>
-      <p>
-        A national movement designed to reach, connect, and restore teenagers at a moment when isolation,
-        anxiety, and spiritual confusion are defining an entire generation.
-      </p>
-      <p>
-        Teens are asking life-and-death questions every day — and too often, no one is answering them.
-      </p>
-      <p>
-        Our solution is not theoretical. It is operational.
-      </p>
-    </section>
+<section id="about">
+  <h2>About Us</h2>
+  <p>A national movement designed to reach, connect, and restore teenagers.</p>
+</section>
 
-    <div class="divider"></div>
+<div class="divider"></div>
 
-    <section id="system">
-      <h2>Our System</h2>
-      <ul>
-        <li>Nationwide teen conferences presenting hope, truth, and purpose</li>
-        <li>A global digital platform offering spiritual guidance and mental-health check-ins</li>
-        <li>Localized intervention connecting teens to vetted churches, counselors, and trusted advisors</li>
-      </ul>
-      <p>
-        When a teen reaches out for help, they are not left alone. They are immediately connected
-        to real people, real resources, and real follow-through.
-      </p>
+<section id="system">
+  <h2>Our System</h2>
+  <ul>
+    <li>Nationwide teen conferences</li>
+    <li>Global digital support platform</li>
+    <li>Local church-based intervention</li>
+  </ul>
+</section>
 
-      <div class="divider"></div>
+<div class="divider"></div>
 
-      <!-- The App Section with Icons -->
-      <div class="app-description">
-        <h3>The App:</h3>
-        <p>Our technology platform connects teens, leaders, and staff to ensure real-time support.</p>
-        <ul>
-          <li><strong>✝ Staff:</strong> Can see all users, view maps and profiles of leaders, send resources to students, and connect teens to local help.</li>
-          <li><strong>📖 Student:</strong> Access in-house Bibles, daily encouragement/biblical messages, a “Questions” tab for biblical or life questions, or prayer requests, and personalized study plans.</li>
-          <li><strong>🧑‍🏫 Leader:</strong> Connects with staff, receives notifications if a teen needs help, provides resources like counseling or necessities, and has a training tab to improve mentoring skills.</li>
-        </ul>
-      </div>
+<section id="goal">
+  <h2>Our Goal</h2>
+  <p>This is not a short-term program. It is an infrastructure for the next generation.</p>
+</section>
 
-    </section>
+<div class="divider"></div>
 
-    <div class="divider"></div>
+<section id="adolescent">
+  <h2>Adolescent Challenges</h2>
+  <table>
+    <tr><th>Statistic</th><th>Percentage</th><th>Estimated Count</th></tr>
+    <tr><td>Considered suicide</td><td>12.3%</td><td>3.2M</td></tr>
+    <tr><td>Attempted suicide</td><td>3.3%</td><td>856k</td></tr>
+    <tr><td>Persistent sadness</td><td>40%</td><td>10M</td></tr>
+  </table>
+</section>
 
-    <section id="goal">
-      <h2>Our Goal</h2>
-      <p>
-        Our mission is clear: expand conferences nationwide, scale our technology platform globally,
-        and train churches, counselors, and advisors to support teens wherever they are.
-      </p>
-      <p>
-        This is not a short-term program. It is an infrastructure for the next generation —
-        designed to restore hope, truth, and purpose to young people everywhere.
-      </p>
-      <p>
-        If you’ve ever asked, “What can actually turn the tide for young people?” — this is it.
-      </p>
-    </section>
+<div class="divider"></div>
 
-    <div class="divider"></div>
+<section id="getinvolved">
+  <h2>Get Involved</h2>
+  <p>Join the movement and help restore hope, truth, and purpose.</p>
+  <a class="button" href="mailto:Dillon@shatterthenations.org">Join / Donate</a>
 
-    <section id="adolescent">
-      <h2>Adolescent Challenges</h2>
-      <p>The following statistics highlight the serious challenges facing teens today:</p>
+  <div class="scripture-block">
+    <p class="scripture-text">
+      “Then I told them of the hand of my God which was good upon me; as also the king's words that he had spoken unto me.
+      And they said,
+      <span class="scripture-emphasis">LET US RISE UP AND BUILD.</span>
+      So they strengthened their hands for this good work.”
+    </p>
+    <p class="scripture-reference">— Nehemiah 2:18</p>
+  </div>
+</section>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Statistic</th>
-            <th>Percentage</th>
-            <th>Estimated Count</th>
-            <th>Source</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Teens seriously considered suicide (past year)</td>
-            <td>~12.3%</td>
-            <td>~3,200,000 teens</td>
-            <td>SAMHSA</td>
-          </tr>
-          <tr>
-            <td>Teens who attempted suicide (past year)</td>
-            <td>~3.3%</td>
-            <td>~856,000 teens</td>
-            <td>SAMHSA</td>
-          </tr>
-          <tr>
-            <td>Teens with persistent sadness/hopelessness</td>
-            <td>~40%</td>
-            <td>~10,000,000 teens</td>
-            <td>CDC</td>
-          </tr>
-          <tr>
-            <td>Teens with anxiety symptoms</td>
-            <td>~20%</td>
-            <td>~5,000,000 teens</td>
-            <td>CDC</td>
-          </tr>
-          <tr>
-            <td>Teens with depression symptoms</td>
-            <td>~18%</td>
-            <td>~4,500,000 teens</td>
-            <td>CDC</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+</main>
 
-    <div class="divider"></div>
-
-    <section id="getinvolved">
-      <h2>Get Involved</h2>
-      <p>
-        Join the movement. Volunteer, donate, or partner with us to help restore
-        hope, truth, and purpose to the next generation.
-      </p>
-      <a class="button" href="mailto:Dillon@shatterthenations.org">Join / Donate</a>
-    </section>
-
-  </main>
-
-  <footer>
-    &copy; 2026 Shatter the Nations
-  </footer>
+<footer>
+  © 2026 Shatter the Nations
+</footer>
 
 </body>
 </html>
