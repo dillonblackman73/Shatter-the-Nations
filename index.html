@@ -6,14 +6,12 @@
   <title>Shatter the Nations</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Lato:wght@400;700&family=Merriweather:wght@700&family=Indie+Flower&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --gold: #FFD700;
       --navy: #0B1D3A;
-      --grey-stone: #555555;
-      --grey-bg: #F0F0F0;
       --dark-grey: #222222;
     }
 
@@ -23,102 +21,66 @@
       padding: 0;
       background: url('teens-worship.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: var(--dark-grey);
       text-align: center;
       position: relative;
     }
 
-    /* Dark overlay for readability */
+    /* Dark overlay */
     body::before {
       content: "";
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.4);
+      inset: 0;
+      background: rgba(0,0,0,0.45);
       z-index: -1;
     }
 
     header {
       position: relative;
-      padding: 80px 20px 60px 20px;
-      color: var(--gold);
+      padding: 90px 20px 60px;
+      color: white;
     }
 
-    /* Globe Icon top-left */
+    /* Globe icon */
     .globe {
       position: absolute;
       top: 20px;
       left: 20px;
-      font-size: 50px;
+      font-size: 48px;
     }
 
-    /* Header text styling */
-    .header-title {
-      display: inline-block;
-      line-height: 1;
+    /* Logo image */
+    .logo img {
+      max-width: 420px;
+      width: 90%;
+      height: auto;
+      margin-bottom: 25px;
+      filter: drop-shadow(0 0 18px rgba(255,215,0,0.6));
     }
 
-    .shatter {
-      font-family: 'Cinzel', serif;
-      font-weight: 900;
-      font-size: 4em;
-      color: var(--grey-stone);
-      text-shadow: 2px 2px 8px #333;
-      display: block;
-    }
-
-    .the {
-      font-family: 'Indie Flower', cursive;
-      font-size: 2em;
-      color: var(--gold);
-      font-style: italic;
-      display: block;
-      margin-left: 10px;
-    }
-
-    .nations {
-      font-family: 'Cinzel', serif;
-      font-weight: 900;
-      font-size: 4em;
-      color: var(--gold);
-      text-shadow: 0 0 15px #FFD700, 0 0 25px #FFC700, 0 0 35px #FFD700;
-      display: block;
-      margin-top: -10px;
-    }
-
-    header p.mission {
+    .mission {
       font-size: 1.3em;
-      color: #ffffff;
       max-width: 900px;
-      margin: 25px auto 30px auto;
+      margin: 0 auto 30px;
     }
 
-    a.button {
+    .button {
       display: inline-block;
-      margin-top: 25px;
       padding: 15px 40px;
-      background-color: var(--gold);
+      background: var(--gold);
       color: var(--navy);
       font-weight: bold;
-      font-size: 1.1em;
       text-decoration: none;
       border-radius: 8px;
-      transition: 0.3s;
-    }
-
-    a.button:hover {
-      background-color: #e6c200;
     }
 
     main {
-      padding: 50px 20px;
+      background: rgba(255,255,255,0.9);
       max-width: 1000px;
-      margin: auto;
+      margin: 60px auto;
+      padding: 50px 25px;
+      border-radius: 16px;
       text-align: left;
-      background-color: rgba(255,255,255,0.85);
-      border-radius: 15px;
+      color: var(--dark-grey);
     }
 
     section {
@@ -127,74 +89,38 @@
 
     section h2 {
       font-family: 'Merriweather', serif;
-      font-size: 2em;
       color: var(--navy);
+      font-size: 2em;
       margin-bottom: 20px;
-      position: relative;
-      display: inline-block;
     }
 
     section h2::before {
-      content: "✝";
-      position: absolute;
-      left: -30px;
-      top: 0;
+      content: "✝ ";
       color: var(--gold);
-      font-size: 1.5em;
-    }
-
-    section p {
-      font-family: 'Lato', sans-serif;
-      font-size: 1.1em;
-      color: var(--dark-grey);
-      margin-bottom: 15px;
-    }
-
-    ul {
-      text-align: left;
-      margin-left: 30px;
-      margin-bottom: 20px;
-    }
-
-    li {
-      margin-bottom: 10px;
     }
 
     footer {
-      background-color: var(--navy);
+      background: var(--navy);
       color: var(--gold);
-      padding: 25px 20px;
+      padding: 25px;
       font-size: 0.9em;
-      text-align: center;
-    }
-
-    footer::before {
-      content: "✝ ";
     }
 
     @media(max-width:768px){
-      header h1{
-        font-size: 2.5em;
-      }
-      .shatter, .nations {
-        font-size: 2.2em;
-      }
-      .the {
-        font-size: 1.5em;
-      }
-      .globe {
-        font-size: 35px;
+      .logo img {
+        max-width: 300px;
       }
     }
   </style>
 </head>
+
 <body>
+
   <header>
     <div class="globe">🌐</div>
-    <div class="header-title">
-      <span class="shatter">Shatter</span>
-      <span class="the">the</span>
-      <span class="nations">Nations</span>
+
+    <div class="logo">
+      <img src="Screenshot_20260106_190438_ChatGPT.jpg" alt="Shatter the Nations Logo">
     </div>
 
     <p class="mission">
@@ -205,41 +131,31 @@
   </header>
 
   <main>
-    <!-- All previous content sections remain identical -->
     <section>
       <h2>About Us</h2>
       <p>A national movement designed to reach, connect, and restore teenagers at a moment when isolation, anxiety, and spiritual confusion are defining an entire generation.</p>
-      <p>Here’s the reality:<br>
-      Teens are asking life-and-death questions every day — and too often, no one is answering them.</p>
+      <p>Teens are asking life-and-death questions every day — and too often, no one is answering them.</p>
       <p>Our solution is not theoretical. It is operational.</p>
     </section>
 
     <section>
       <h2>Our System</h2>
-      <p>Shatter the Nations combines three proven pillars into one scalable system:</p>
       <ul>
-        <li>Nationwide teen conferences that clearly present hope, truth, and purpose</li>
-        <li>A global digital platform that provides ongoing encouragement, spiritual guidance, and mental-health check-ins</li>
-        <li>Localized intervention, connecting teens directly to vetted churches, counselors, and trusted advisors in their own communities</li>
+        <li>Nationwide teen conferences presenting hope, truth, and purpose</li>
+        <li>A global digital platform offering spiritual guidance and mental-health check-ins</li>
+        <li>Localized intervention connecting teens to trusted churches and counselors</li>
       </ul>
-      <p>When a teen reaches out for help, they are not left alone. They are immediately connected to real people, real resources, and real follow-through.</p>
     </section>
 
     <section>
       <h2>Our Goal</h2>
-      <p>Our goal is clear and measurable: <strong>$5 million in 12 months</strong></p>
-      <p>This funding allows us to:</p>
-      <ul>
-        <li>Expand conferences nationwide</li>
-        <li>Scale our technology platform globally</li>
-        <li>Train and onboard churches, counselors, and advisors across the country</li>
-      </ul>
-      <p>This is not a short-term program. It is an infrastructure for the next generation. If you’ve ever asked, “What can actually turn the tide for young people?” — this is it.</p>
+      <p><strong>$5 million in 12 months</strong></p>
+      <p>This funding expands conferences, scales technology, and builds nationwide partnerships.</p>
     </section>
 
     <section>
       <h2>Get Involved</h2>
-      <p>Join our movement. Volunteer, donate, or partner with us to make an eternal impact. Every contribution helps us reach more teenagers with life-changing support and spiritual guidance.</p>
+      <p>Volunteer, donate, or partner with us to help reach the next generation.</p>
       <a class="button" href="mailto:info@shatterthenations.org">Join / Donate</a>
     </section>
   </main>
@@ -247,5 +163,6 @@
   <footer>
     &copy; 2026 Shatter the Nations
   </footer>
+
 </body>
 </html>
