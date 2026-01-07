@@ -21,7 +21,7 @@
     body {
       margin: 0;
       font-family: 'Lato', sans-serif;
-      background: var(--light); /* white page outside header */
+      background: var(--light);
       scroll-behavior: smooth;
     }
 
@@ -54,7 +54,7 @@
       position: relative;
       text-align: center;
       padding: 90px 20px 60px;
-      background-color: #000; /* fully black behind logo */
+      background-color: #000;
     }
 
     header::before {
@@ -63,7 +63,7 @@
       inset: 0;
       background: url('teens-worship.jpg') no-repeat center center;
       background-size: cover;
-      opacity: 0.3; /* subtle image behind black header */
+      opacity: 0.3;
       z-index: 0;
     }
 
@@ -101,6 +101,7 @@
 
     .button:hover {
       background: #e6c200;
+      transform: translateY(-2px);
     }
 
     /* ===== MAIN CONTENT ===== */
@@ -113,8 +114,25 @@
     }
 
     section {
-      margin-bottom: 70px;
+      margin-bottom: 90px;
       position: relative;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s forwards;
+    }
+
+    section:nth-child(1) {animation-delay: 0.2s;}
+    section:nth-child(2) {animation-delay: 0.4s;}
+    section:nth-child(3) {animation-delay: 0.6s;}
+    section:nth-child(4) {animation-delay: 0.8s;}
+    section:nth-child(5) {animation-delay: 1s;}
+    section:nth-child(6) {animation-delay: 1.2s;}
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     section h2 {
@@ -133,38 +151,54 @@
       font-size: 1.3em;
     }
 
-    /* Gold divider */
     .divider {
-      height: 2px;
+      height: 3px;
       background: var(--gold);
-      margin: 40px 0;
-      border-radius: 2px;
+      margin: 50px 0;
+      border-radius: 3px;
     }
 
     section p, li {
-      font-size: 1.1em;
-      line-height: 1.7;
+      font-size: 1.15em;
+      line-height: 1.8;
     }
 
     ul {
       margin-left: 25px;
+      list-style-type: disc;
+      list-style-position: inside;
+      color: var(--text-dark);
+    }
+
+    ul li::marker {
+      color: var(--gold);
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid var(--gold);
     }
 
     th, td {
-      border: 1px solid var(--gold);
-      padding: 10px;
+      padding: 12px;
       text-align: left;
     }
 
     th {
       background-color: var(--gold);
       color: #000;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: #fdf6e3; /* light goldish row */
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #ffffff;
     }
 
     footer {
@@ -187,6 +221,7 @@
         flex-wrap: wrap;
       }
     }
+
   </style>
 </head>
 
@@ -215,7 +250,6 @@
     <a class="button" href="mailto:info@shatterthenations.org">Donate / Contact</a>
   </header>
 
-  <!-- WHITE MAIN CONTENT -->
   <main>
 
     <section id="about">
@@ -246,19 +280,19 @@
         to real people, real resources, and real follow-through.
       </p>
 
-      <!-- GOLD DIVIDER ABOVE APP -->
       <div class="divider"></div>
 
-      <!-- NEW APP DESCRIPTION -->
+      <!-- The App Section with Icons -->
       <div class="app-description">
         <h3>The App:</h3>
         <p>Our technology platform connects teens, leaders, and staff to ensure real-time support.</p>
         <ul>
-          <li><strong>Staff:</strong> Can see all users, view maps and profiles of leaders, send resources to students, and connect teens to local help.</li>
-          <li><strong>Student:</strong> Access in-house Bibles, daily encouragement/biblical messages, a “Questions” tab for biblical or life questions, or prayer requests, and personalized study plans.</li>
-          <li><strong>Leader:</strong> Connects with staff, receives notifications if a teen needs help, provides resources like counseling or necessities, and has a training tab to improve mentoring skills.</li>
+          <li><strong>✝ Staff:</strong> Can see all users, view maps and profiles of leaders, send resources to students, and connect teens to local help.</li>
+          <li><strong>📖 Student:</strong> Access in-house Bibles, daily encouragement/biblical messages, a “Questions” tab for biblical or life questions, or prayer requests, and personalized study plans.</li>
+          <li><strong>🧑‍🏫 Leader:</strong> Connects with staff, receives notifications if a teen needs help, provides resources like counseling or necessities, and has a training tab to improve mentoring skills.</li>
         </ul>
       </div>
+
     </section>
 
     <div class="divider"></div>
