@@ -5,23 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shatter the Nations</title>
 
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --gold: #FFD700;
-      --purple: #6A0DAD;
-      --dark: #000;
-      --light: #fff;
-      --text-dark: #222;
+      --navy: #0B1D3A;
+      --dark: #000000;
+      --light: #ffffff;
+      --text-dark: #222222;
+      --purple: #4B0082; /* bold dark purple */
     }
 
     body {
       margin: 0;
       font-family: 'Lato', sans-serif;
       background: var(--light);
+      scroll-behavior: smooth;
     }
 
+    /* ===== NAVIGATION BAR ===== */
     nav {
       position: sticky;
       top: 0;
@@ -37,116 +41,200 @@
       color: var(--gold);
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.1em;
+      transition: 0.3s;
     }
 
+    nav a:hover {
+      color: #fff;
+    }
+
+    /* ===== HEADER ===== */
     header {
       position: relative;
       text-align: center;
       padding: 60px 20px 40px;
-      background: #000;
+      background-color: #000;
     }
 
     header::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: url('teens-worship.jpg') center/cover no-repeat;
+      background: url('teens-worship.jpg') no-repeat center center;
+      background-size: cover;
       opacity: 0.3;
+      z-index: 0;
     }
 
     .logo img {
-      max-width: 420px;
-      width: 90%;
-      margin-bottom: 25px;
       position: relative;
       z-index: 1;
+      max-width: 420px;
+      width: 90%;
+      height: auto;
+      display: block;
+      margin: 0 auto 25px;
     }
 
+    /* ===== HEADER TEXT ===== */
     .header-text {
       position: relative;
       z-index: 1;
-      color: #fff;
       max-width: 900px;
-      margin: auto;
+      margin: 0 auto;
+      padding: 20px 15px;
+      text-align: center;
+      color: var(--gold);
     }
 
     .header-title {
       font-family: 'Merriweather', serif;
+      font-size: 2.8em;
+      font-weight: 700;
       color: var(--gold);
-      font-size: 2.6em;
+      margin-bottom: 20px;
+    }
+
+    .header-mission {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.2em;
+      line-height: 1.6;
+      color: #fff;
+      margin-bottom: 25px;
+    }
+
+    .header-impact {
+      font-family: 'Lato', sans-serif;
+      text-align: center;
+      line-height: 1.8;
+      margin-bottom: 30px;
     }
 
     .header-impact span {
       display: block;
-      font-weight: bold;
-      margin-top: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
 
-    .line1 { color: var(--gold); font-size: 1.4em; }
-    .line2 { color: var(--purple); font-size: 1.6em; }
-    .line3 {
+    .header-impact .line1 {
+      font-size: 1.5em;
       color: var(--gold);
-      font-size: 2.1em;
-      text-shadow: 0 0 10px var(--gold);
+    }
+
+    .header-impact .line2 {
+      font-size: 1.6em;
+      margin-top: 10px;
+      color: var(--purple);
+    }
+
+    .header-impact .line3 {
+      font-size: 2.2em;
+      margin-top: 15px;
+      color: var(--gold);
+      text-shadow: 0 0 8px #FFD700, 0 0 15px #FFD700;
     }
 
     .button {
-      margin-top: 30px;
       display: inline-block;
       padding: 15px 40px;
       background: var(--gold);
       color: #000;
       font-weight: bold;
-      border-radius: 8px;
       text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+      position: relative;
+      z-index: 1;
     }
 
+    .button:hover {
+      background: #e6c200;
+      transform: translateY(-2px);
+    }
+
+    /* ===== MAIN CONTENT ===== */
     main {
+      background: var(--light);
+      color: var(--text-dark);
       max-width: 1100px;
-      margin: auto;
+      margin: 0 auto;
       padding: 70px 30px;
     }
 
     section {
       margin-bottom: 90px;
+      position: relative;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s forwards;
+    }
+
+    section:nth-child(1) {animation-delay: 0.2s;}
+    section:nth-child(2) {animation-delay: 0.4s;}
+    section:nth-child(3) {animation-delay: 0.6s;}
+    section:nth-child(4) {animation-delay: 0.8s;}
+    section:nth-child(5) {animation-delay: 1s;}
+    section:nth-child(6) {animation-delay: 1.2s;}
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     section h2 {
       font-family: 'Merriweather', serif;
-      color: var(--purple);
       font-size: 2.2em;
+      margin-bottom: 25px;
       display: flex;
       align-items: center;
       gap: 10px;
+      color: var(--purple);
     }
 
     section h2::before {
       content: "✝";
       color: var(--gold);
+      font-size: 1.3em;
     }
 
     .divider {
       height: 3px;
       background: var(--gold);
       margin: 50px 0;
+      border-radius: 3px;
     }
 
-    ul li::marker { color: var(--gold); }
+    section p, li {
+      font-size: 1.15em;
+      line-height: 1.8;
+    }
+
+    ul {
+      margin-left: 25px;
+      list-style-position: inside;
+    }
+
+    ul li::marker {
+      color: var(--gold);
+    }
 
     table {
       width: 100%;
       border-collapse: collapse;
+      margin-top: 20px;
       border: 2px solid var(--gold);
+    }
+
+    th, td {
+      padding: 12px;
     }
 
     th {
       background: var(--gold);
       color: #000;
-      padding: 12px;
-    }
-
-    td {
-      padding: 12px;
     }
 
     footer {
@@ -156,7 +244,7 @@
       padding: 25px;
     }
 
-    /* Scripture Styling */
+    /* ===== SCRIPTURE BLOCK ===== */
     .scripture-block {
       margin-top: 50px;
       padding: 35px 25px;
@@ -168,7 +256,6 @@
       font-family: 'Merriweather', serif;
       font-size: 1.25em;
       line-height: 1.8;
-      color: #222;
     }
 
     .scripture-emphasis {
@@ -179,7 +266,7 @@
       color: var(--gold);
       letter-spacing: 2px;
       text-transform: uppercase;
-      text-shadow: 0 0 8px rgba(255,215,0,.7);
+      text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
     }
 
     .scripture-reference {
@@ -203,11 +290,16 @@
 
 <header id="home">
   <div class="logo">
-    <img src="Screenshot_20260106_190438_ChatGPT.jpg" alt="Logo">
+    <img src="Screenshot_20260106_190438_ChatGPT.jpg" alt="Shatter the Nations Logo">
   </div>
 
   <div class="header-text">
     <h1 class="header-title">A GLOBAL TAKE-OVER FOR THE KINGDOM</h1>
+    <p class="header-mission">
+      Awakening and uniting thousands of churches to unleash a wave of Holy Spirit-filled revivals,
+      to support and empower the rising teenage generation, and SHATTERING ALL NATIONS with God's Word—
+      sending disciples to every nation and to every corner of the earth.
+    </p>
     <p class="header-impact">
       <span class="line1">REVIVAL IS NOW.</span>
       <span class="line2">DISCIPLES ARE RISING.</span>
@@ -220,46 +312,12 @@
 
 <main>
 
-<section id="about">
-  <h2>About Us</h2>
-  <p>A national movement designed to reach, connect, and restore teenagers.</p>
-</section>
-
-<div class="divider"></div>
-
-<section id="system">
-  <h2>Our System</h2>
-  <ul>
-    <li>Nationwide teen conferences</li>
-    <li>Global digital support platform</li>
-    <li>Local church-based intervention</li>
-  </ul>
-</section>
-
-<div class="divider"></div>
-
-<section id="goal">
-  <h2>Our Goal</h2>
-  <p>This is not a short-term program. It is an infrastructure for the next generation.</p>
-</section>
-
-<div class="divider"></div>
-
-<section id="adolescent">
-  <h2>Adolescent Challenges</h2>
-  <table>
-    <tr><th>Statistic</th><th>Percentage</th><th>Estimated Count</th></tr>
-    <tr><td>Considered suicide</td><td>12.3%</td><td>3.2M</td></tr>
-    <tr><td>Attempted suicide</td><td>3.3%</td><td>856k</td></tr>
-    <tr><td>Persistent sadness</td><td>40%</td><td>10M</td></tr>
-  </table>
-</section>
-
-<div class="divider"></div>
-
 <section id="getinvolved">
   <h2>Get Involved</h2>
-  <p>Join the movement and help restore hope, truth, and purpose.</p>
+  <p>
+    Join the movement. Volunteer, donate, or partner with us to help restore
+    hope, truth, and purpose to the next generation.
+  </p>
   <a class="button" href="mailto:Dillon@shatterthenations.org">Join / Donate</a>
 
   <div class="scripture-block">
@@ -276,7 +334,7 @@
 </main>
 
 <footer>
-  © 2026 Shatter the Nations
+  &copy; 2026 Shatter the Nations
 </footer>
 
 </body>
