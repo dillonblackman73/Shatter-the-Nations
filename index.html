@@ -12,7 +12,7 @@
     :root {
       --gold: #FFD700;
       --navy: #0B1D3A;
-      --dark-grey: #222222;
+      --text-light: #F0F0F0;
     }
 
     body {
@@ -23,6 +23,7 @@
       background-size: cover;
       text-align: center;
       position: relative;
+      color: var(--text-light);
     }
 
     /* Dark overlay */
@@ -37,7 +38,6 @@
     header {
       position: relative;
       padding: 90px 20px 60px;
-      color: white;
     }
 
     /* Globe icon */
@@ -61,26 +61,33 @@
       font-size: 1.3em;
       max-width: 900px;
       margin: 0 auto 30px;
+      line-height: 1.6;
     }
 
     .button {
       display: inline-block;
       padding: 15px 40px;
       background: var(--gold);
-      color: var(--navy);
+      color: #000;
       font-weight: bold;
       text-decoration: none;
       border-radius: 8px;
+      transition: 0.3s ease;
+    }
+
+    .button:hover {
+      background: #e6c200;
     }
 
     main {
-      background: rgba(255,255,255,0.9);
+      background: rgba(0,0,0,0.75);
       max-width: 1000px;
       margin: 60px auto;
       padding: 50px 25px;
       border-radius: 16px;
       text-align: left;
-      color: var(--dark-grey);
+      color: var(--text-light);
+      box-shadow: 0 0 40px rgba(255,215,0,0.15);
     }
 
     section {
@@ -89,18 +96,26 @@
 
     section h2 {
       font-family: 'Merriweather', serif;
-      color: var(--navy);
       font-size: 2em;
+      color: var(--gold);
       margin-bottom: 20px;
     }
 
     section h2::before {
       content: "✝ ";
-      color: var(--gold);
+    }
+
+    section p, li {
+      font-size: 1.1em;
+      line-height: 1.7;
+    }
+
+    ul {
+      margin-left: 25px;
     }
 
     footer {
-      background: var(--navy);
+      background: #000;
       color: var(--gold);
       padding: 25px;
       font-size: 0.9em;
@@ -109,6 +124,9 @@
     @media(max-width:768px){
       .logo img {
         max-width: 300px;
+      }
+      main {
+        margin: 40px 15px;
       }
     }
   </style>
@@ -133,9 +151,16 @@
   <main>
     <section>
       <h2>About Us</h2>
-      <p>A national movement designed to reach, connect, and restore teenagers at a moment when isolation, anxiety, and spiritual confusion are defining an entire generation.</p>
-      <p>Teens are asking life-and-death questions every day — and too often, no one is answering them.</p>
-      <p>Our solution is not theoretical. It is operational.</p>
+      <p>
+        A national movement designed to reach, connect, and restore teenagers at a moment when isolation,
+        anxiety, and spiritual confusion are defining an entire generation.
+      </p>
+      <p>
+        Teens are asking life-and-death questions every day — and too often, no one is answering them.
+      </p>
+      <p>
+        Our solution is not theoretical. It is operational.
+      </p>
     </section>
 
     <section>
@@ -143,19 +168,33 @@
       <ul>
         <li>Nationwide teen conferences presenting hope, truth, and purpose</li>
         <li>A global digital platform offering spiritual guidance and mental-health check-ins</li>
-        <li>Localized intervention connecting teens to trusted churches and counselors</li>
+        <li>Localized intervention connecting teens to vetted churches, counselors, and trusted advisors</li>
       </ul>
+      <p>
+        When a teen reaches out for help, they are not left alone. They are immediately connected
+        to real people, real resources, and real follow-through.
+      </p>
     </section>
 
     <section>
       <h2>Our Goal</h2>
       <p><strong>$5 million in 12 months</strong></p>
-      <p>This funding expands conferences, scales technology, and builds nationwide partnerships.</p>
+      <p>
+        This funding allows us to expand conferences nationwide, scale our technology globally,
+        and train churches, counselors, and advisors across the country.
+      </p>
+      <p>
+        This is not a short-term program. It is an infrastructure for the next generation.
+        If you’ve ever asked, “What can actually turn the tide for young people?” — this is it.
+      </p>
     </section>
 
     <section>
       <h2>Get Involved</h2>
-      <p>Volunteer, donate, or partner with us to help reach the next generation.</p>
+      <p>
+        Join the movement. Volunteer, donate, or partner with us to help restore
+        hope, truth, and purpose to the next generation.
+      </p>
       <a class="button" href="mailto:info@shatterthenations.org">Join / Donate</a>
     </section>
   </main>
