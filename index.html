@@ -24,7 +24,7 @@
       background-size: cover;
     }
 
-    /* Dark overlay ONLY for background image */
+    /* Dark overlay for background image */
     body::before {
       content: "";
       position: fixed;
@@ -34,20 +34,11 @@
     }
 
     /* ================= HEADER (BLACK) ================= */
-
     header {
-      background: rgba(0,0,0,0.9);
+      background: #000000; /* fully black */
       color: #ffffff;
       text-align: center;
       padding: 90px 20px 60px;
-      position: relative;
-    }
-
-    .globe {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      font-size: 48px;
     }
 
     .logo img {
@@ -55,7 +46,11 @@
       width: 90%;
       height: auto;
       margin-bottom: 25px;
-      filter: drop-shadow(0 0 18px rgba(255,215,0,0.6));
+      filter: none; /* remove glow */
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      background: #000; /* ensure black background behind logo */
     }
 
     .mission {
@@ -81,7 +76,6 @@
     }
 
     /* ================= MAIN (WHITE) ================= */
-
     main {
       background: var(--light);
       color: var(--text-dark);
@@ -117,7 +111,6 @@
     }
 
     /* ================= FOOTER ================= */
-
     footer {
       background: #000;
       color: var(--gold);
@@ -127,7 +120,6 @@
     }
 
     /* ================= MOBILE ================= */
-
     @media(max-width:768px){
       .logo img {
         max-width: 300px;
@@ -143,8 +135,6 @@
 
   <!-- BLACK HEADER -->
   <header>
-    <div class="globe">🌍</div>
-
     <div class="logo">
       <img src="Screenshot_20260106_190438_ChatGPT.jpg" alt="Shatter the Nations Logo">
     </div>
