@@ -23,7 +23,7 @@
       font-family: 'Lato', sans-serif;
       background: url('teens-worship.jpg') no-repeat center center fixed;
       background-size: cover;
-      scroll-behavior: smooth; /* smooth scrolling for tabs */
+      scroll-behavior: smooth;
     }
 
     body::before {
@@ -109,6 +109,7 @@
 
     section {
       margin-bottom: 70px;
+      position: relative;
     }
 
     section h2 {
@@ -116,11 +117,23 @@
       font-size: 2.2em;
       color: var(--navy);
       margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     section h2::before {
-      content: "✝ ";
+      content: "✝";
       color: var(--gold);
+      font-size: 1.3em;
+    }
+
+    /* Gold divider */
+    .divider {
+      height: 2px;
+      background: var(--gold);
+      margin: 40px 0;
+      border-radius: 2px;
     }
 
     section p, li {
@@ -196,6 +209,8 @@
       </p>
     </section>
 
+    <div class="divider"></div>
+
     <section id="system">
       <h2>Our System</h2>
       <ul>
@@ -209,6 +224,8 @@
       </p>
     </section>
 
+    <div class="divider"></div>
+
     <section id="goal">
       <h2>Our Goal</h2>
       <p><strong>$5 million in 12 months</strong></p>
@@ -221,6 +238,8 @@
         If you’ve ever asked, “What can actually turn the tide for young people?” — this is it.
       </p>
     </section>
+
+    <div class="divider"></div>
 
     <section id="getinvolved">
       <h2>Get Involved</h2>
