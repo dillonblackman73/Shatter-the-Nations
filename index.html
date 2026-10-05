@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shatter the Nations</title>
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-
   <style>
     :root {
       --gold: #FFD700;
@@ -17,14 +15,12 @@
       --text-dark: #222222;
       --purple: #6A0DAD; /* bold dark purple */
     }
-
     body {
       margin: 0;
       font-family: 'Lato', sans-serif;
       background: var(--light);
       scroll-behavior: smooth;
     }
-
     /* ===== NAVIGATION BAR ===== */
     nav {
       position: sticky;
@@ -36,7 +32,6 @@
       padding: 15px 0;
       z-index: 10;
     }
-
     nav a {
       color: var(--gold);
       text-decoration: none;
@@ -44,11 +39,9 @@
       font-size: 1.1em;
       transition: 0.3s;
     }
-
     nav a:hover {
       color: #fff;
     }
-
     /* ===== HEADER ===== */
     header {
       position: relative;
@@ -56,7 +49,6 @@
       padding: 60px 20px 40px;
       background-color: #000;
     }
-
     header::before {
       content: "";
       position: absolute;
@@ -66,7 +58,6 @@
       opacity: 0.3;
       z-index: 0;
     }
-
     .logo img {
       position: relative;
       z-index: 1;
@@ -76,7 +67,6 @@
       display: block;
       margin: 0 auto 25px;
     }
-
     /* ===== HEADER TEXT ===== */
     .header-text {
       position: relative;
@@ -87,7 +77,6 @@
       text-align: center;
       color: var(--gold);
     }
-
     .header-title {
       font-family: 'Merriweather', serif;
       font-size: 2.8em;
@@ -95,7 +84,6 @@
       color: var(--gold);
       margin-bottom: 20px;
     }
-
     .header-mission {
       font-family: 'Lato', sans-serif;
       font-size: 1.2em;
@@ -103,38 +91,32 @@
       color: #fff;
       margin-bottom: 25px;
     }
-
     .header-impact {
       font-family: 'Lato', sans-serif;
       text-align: center;
       line-height: 1.8;
       margin-bottom: 30px;
     }
-
     .header-impact span {
       display: block;
       font-weight: 700;
       letter-spacing: 1px;
     }
-
     .header-impact .line1 {
       font-size: 1.5em;
       color: var(--gold);
     }
-
     .header-impact .line2 {
       font-size: 1.6em;
       margin-top: 10px;
       color: var(--purple); /* dark purple */
     }
-
     .header-impact .line3 {
       font-size: 2.2em;
       margin-top: 15px;
       color: var(--gold);
       text-shadow: 0 0 8px #FFD700, 0 0 15px #FFD700; /* glowing effect */
     }
-
     .button {
       display: inline-block;
       padding: 15px 40px;
@@ -147,12 +129,10 @@
       position: relative;
       z-index: 1;
     }
-
     .button:hover {
       background: #e6c200;
       transform: translateY(-2px);
     }
-
     /* ===== MAIN CONTENT ===== */
     main {
       background: var(--light);
@@ -161,7 +141,6 @@
       margin: 0 auto;
       padding: 70px 30px;
     }
-
     section {
       margin-bottom: 90px;
       position: relative;
@@ -169,21 +148,18 @@
       transform: translateY(20px);
       animation: fadeIn 1s forwards;
     }
-
     section:nth-child(1) {animation-delay: 0.2s;}
     section:nth-child(2) {animation-delay: 0.4s;}
     section:nth-child(3) {animation-delay: 0.6s;}
     section:nth-child(4) {animation-delay: 0.8s;}
     section:nth-child(5) {animation-delay: 1s;}
     section:nth-child(6) {animation-delay: 1.2s;}
-
     @keyframes fadeIn {
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
-
     /* ===== SECTION HEADINGS ===== */
     section h2 {
       font-family: 'Merriweather', serif;
@@ -194,36 +170,30 @@
       gap: 10px;
       color: var(--purple); /* dark purple */
     }
-
     section h2::before {
       content: "✝";
       color: var(--gold);
       font-size: 1.3em;
     }
-
     .divider {
       height: 3px;
       background: var(--gold);
       margin: 50px 0;
       border-radius: 3px;
     }
-
     section p, li {
       font-size: 1.15em;
       line-height: 1.8;
     }
-
     ul {
       margin-left: 25px;
       list-style-type: disc;
       list-style-position: inside;
       color: var(--text-dark);
     }
-
     ul li::marker {
       color: var(--gold);
     }
-
     table {
       width: 100%;
       border-collapse: collapse;
@@ -232,25 +202,20 @@
       overflow: hidden;
       border: 2px solid var(--gold);
     }
-
     th, td {
       padding: 12px;
       text-align: left;
     }
-
     th {
       background-color: var(--gold);
       color: #000;
     }
-
     tbody tr:nth-child(odd) {
       background-color: #fdf6e3;
     }
-
     tbody tr:nth-child(even) {
       background-color: #ffffff;
     }
-
     footer {
       background: #000;
       color: var(--gold);
@@ -258,7 +223,6 @@
       padding: 25px;
       font-size: 0.9em;
     }
-
     @media(max-width:768px){
       .logo img {
         max-width: 300px;
@@ -288,9 +252,7 @@
     }
   </style>
 </head>
-
 <body>
-
   <!-- NAVIGATION TABS -->
   <nav>
     <a href="#home">Home</a>
@@ -300,13 +262,11 @@
     <a href="#adolescent">Adolescent Challenges</a>
     <a href="#getinvolved">Get Involved</a>
   </nav>
-
   <!-- BLACK HEADER -->
   <header id="home">
     <div class="logo">
-      <img src="Screenshot_20260106_190438_ChatGPT.jpg" alt="Shatter the Nations Logo">
+      <img src="IMG_7991.jpeg" alt="Shatter the Nations Logo">
     </div>
-
     <!-- HEADER TEXT -->
     <div class="header-text">
       <h1 class="header-title">A GLOBAL TAKE-OVER FOR THE KINGDOM</h1>
@@ -320,12 +280,9 @@
         <span class="line3">THE NATIONS WILL BE SHAKEN.</span>
       </p>
     </div>
-
     <a class="button" href="mailto:Dillon@shatterthenations.org">Donate / Contact</a>
   </header>
-
   <main>
-
     <section id="about">
       <h2>About Us</h2>
       <p>
@@ -339,9 +296,7 @@
         Our solution is not theoretical. It is operational.
       </p>
     </section>
-
     <div class="divider"></div>
-
     <section id="system">
       <h2>Our System</h2>
       <ul>
@@ -353,9 +308,7 @@
         When a teen reaches out for help, they are not left alone. They are immediately connected
         to real people, real resources, and real follow-through.
       </p>
-
       <div class="divider"></div>
-
       <div class="app-description">
         <h3>The App:</h3>
         <p>Our technology platform connects teens, leaders, and staff to ensure real-time support.</p>
@@ -365,11 +318,8 @@
           <li><strong>🧑‍🏫 Leader:</strong> Connects with staff, receives notifications if a teen needs help, provides resources like counseling or necessities, and has a training tab to improve mentoring skills.</li>
         </ul>
       </div>
-
     </section>
-
     <div class="divider"></div>
-
     <section id="goal">
       <h2>Our Goal</h2>
       <p>
@@ -384,13 +334,10 @@
         If you’ve ever asked, “What can actually turn the tide for young people?” — this is it.
       </p>
     </section>
-
     <div class="divider"></div>
-
     <section id="adolescent">
       <h2>Adolescent Challenges</h2>
       <p>The following statistics highlight the serious challenges facing teens today:</p>
-
       <table>
         <thead>
           <tr>
@@ -434,51 +381,42 @@
         </tbody>
       </table>
     </section>
-
     <div class="divider"></div>
-
     <section id="getinvolved">
       <h2>Get Involved</h2>
       <p>
         Join the movement. Volunteer, donate, or partner with us to help restore
         hope, truth, and purpose to the next generation.
         <div class="divider"></div>
-
 <h3>Join the Shatter the Nations Network</h3>
 <p>
   Churches and leaders who wish to join the network must complete the application below.
 </p>
-
 <iframe 
   src="stn-volunteer-app.pdf"
   width="100%"
   height="750"
   style="border:2px solid #FFD700; border-radius:8px;">
 </iframe>
-
 <p style="margin-top:20px;">
   <a class="button" href="stn-volunteer-app.pdf" target="_blank">
     Download Application (PDF)
   </a>
 </p>
-
       </p>
-
       <!-- ADDED VERSE -->
       <p style="margin-top: 30px; font-style: italic; line-height: 1.8;">
         “Then I told them how the hand of my God had been favorable to me and also about the words that the king had spoken to me.
         And they said, ‘Let us rise up and build.’ So they thoroughly supported the good work.”
         <br><strong>— Nehemiah 2:18</strong>
       </p>
-
       <a class="button" href="mailto:Dillon@shatterthenations.org">Join / Donate</a>
     </section>
-
   </main>
-
   <footer>
     &copy; 2026 Shatter the Nations
   </footer>
-
 </body>
 </html>
+
+Only change: Screenshot_20260106_190438_ChatGPT.jpg → IMG_7991.jpeg.
